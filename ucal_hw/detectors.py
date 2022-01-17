@@ -1,4 +1,4 @@
-from bl_base.detectors import I400
+from sst_base.detectors import I400
 from sst_tes.readable_tes import TES
 
 
@@ -7,9 +7,11 @@ ucal_i400 = I400("XF:07ID-BI{DM2:I400-1}", name="ucal_I400")
 m5c_i400 = I400("XF07ID-BI{M5C:I400-1}", name="M5C_I400")
 tes = TES("tes", address="10.66.51.41", port=4000)
 
+
 def rename_cpt(cpt, name):
     cpt.name = cpt.parent.name + "_" + name
-    
+
+
 # i400 aliases
 ref = ucal_i400.i2
 rename_cpt(ref, "ref")
