@@ -1,4 +1,4 @@
-from bl_base.detectors import I400
+from sst_base.detectors import I400
 from sst_tes.readable_tes import TES
 
 

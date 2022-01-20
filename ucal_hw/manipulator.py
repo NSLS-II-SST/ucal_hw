@@ -1,6 +1,6 @@
-from bl_base.manipulator import Manipulator4AxBase
-from bl_base.motors import PrettyMotorFMBO
-from bl_funcs.geometry.linalg import vec
+from sst_base.manipulator import Manipulator4AxBase
+from sst_base.motors import PrettyMotorFMBO
+from sst_funcs.geometry.linalg import vec
 from ophyd import Component as Cpt
 
 
