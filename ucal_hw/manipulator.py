@@ -1,4 +1,4 @@
-from sst_base.manipulator import Manipulator4AxBase
+from sst_base.manipulator import Manipulator4AxBase, Manipulator1AxBase
 from sst_base.motors import PrettyMotorFMBO
 from sst_funcs.geometry.linalg import vec
 from ophyd import Component as Cpt
@@ -12,6 +12,9 @@ class Manipulator(Manipulator4AxBase):
     y = Cpt(PrettyMotorFMBO, "SampY}Mtr",  name="Manipulator Y")
     z = Cpt(PrettyMotorFMBO, "SampZ}Mtr",  name="Manipulator Z")
     r = Cpt(PrettyMotorFMBO, "SampTh}Mtr", name="Manipulator R")
+
+
+# Check actual PV name
 
 
 manipulator = Manipulator(None, "XF:07ID1-BI{UCAL-Ax:", origin=manip_origin,
