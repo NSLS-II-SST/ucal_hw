@@ -8,10 +8,10 @@ manip_origin = vec(0, 0, 531)
 
 
 class Manipulator(Manipulator4AxBase):
-    x = Cpt(PrettyMotorFMBO, "SampX}Mtr", name="Manipulator X")
-    y = Cpt(PrettyMotorFMBO, "SampY}Mtr",  name="Manipulator Y")
-    z = Cpt(PrettyMotorFMBO, "SampZ}Mtr",  name="Manipulator Z")
-    r = Cpt(PrettyMotorFMBO, "SampTh}Mtr", name="Manipulator R")
+    x = Cpt(PrettyMotorFMBO, "SampX}Mtr", name="Manipulator X", kind='hinted')
+    y = Cpt(PrettyMotorFMBO, "SampY}Mtr",  name="Manipulator Y", kind='hinted')
+    z = Cpt(PrettyMotorFMBO, "SampZ}Mtr",  name="Manipulator Z", kind='hinted')
+    r = Cpt(PrettyMotorFMBO, "SampTh}Mtr", name="Manipulator R", kind='hinted')
 
 
 # Check actual PV name
