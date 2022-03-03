@@ -4,7 +4,7 @@ from sst_funcs.geometry.linalg import vec
 from ophyd import Component as Cpt
 
 # Note, multimesh is in sst_hw
-manip_origin = vec(0, 0, 531, 0)
+manip_origin = vec(0, 0, 464, 0)
 
 
 class Manipulator(Manipulator4AxBase):
