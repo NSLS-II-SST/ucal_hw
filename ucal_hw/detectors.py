@@ -13,6 +13,8 @@ def rename_cpt(cpt, name):
 
 
 # i400 aliases
+i0up = ucal_i400.i1
+rename_cpt(i0up, "i0up")
 ref = ucal_i400.i2
 rename_cpt(ref, "ref")
 i1 = m5c_i400.i1
@@ -25,7 +27,7 @@ dm7_i400.i1.kind = "omitted"
 dm7_i400.i2.kind = "omitted"
 dm7_i400.i4.kind = "omitted"
 
-ucal_i400.i2.kind = "omitted"
+#ucal_i400.i2.kind = "omitted"
 ucal_i400.i4.kind = "omitted"
 
 thresholds = {sc.name: 2e-11, i0.name: 2e-11, ref.name: 2e-11, i1.name: 2e-11}
