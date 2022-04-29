@@ -5,7 +5,7 @@ from sst_tes.readable_tes import TES
 dm7_i400 = I400("XF:07ID-BI{DM7:I400-1}", name="DM7_I400")
 ucal_i400 = I400("XF:07ID-BI{DM2:I400-1}", name="ucal_I400")
 m5c_i400 = I400("XF07ID-BI{M5C:I400-1}", name="M5C_I400")
-tes = TES("tes", address="10.66.48.41", path="/nsls2/data/sst1/legacy/ucal/raw/%Y/%m/%2d", port=4000)
+tes = TES("tes", address="10.66.48.41", path="/nsls2/data/sst/legacy/ucal/raw/%Y/%m/%2d", port=4000)
 
 
 def rename_cpt(cpt, name):
