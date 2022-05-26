@@ -1,5 +1,5 @@
-from sst_base.motors import PrettyMotorFMBO
+from sst_base.motors import PrettyMotor
 
-tesz = PrettyMotorFMBO("XF:07ID1-BI{UCAL-Ax:DetX}Mtr", name="TES z")
+tesz = PrettyMotor("XF:07ID1-BI{UCAL-Ax:DetX}Mtr", name="tesz")
 
 #meshz = PrettyMotorFMBO("XF:07ID1-BI{I0Up-Ax:MMesh}Mtr")
