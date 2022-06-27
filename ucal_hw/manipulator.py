@@ -15,22 +15,15 @@ class Manipulator(Manipulator4AxBase):
 
 
 manipulator = Manipulator(None, "XF:07ID1-BI{UCAL-Ax:", origin=manip_origin,
-                          name="Manipulator")
+                          name="manip")
 
 manipx = manipulator.x
-manipx.name = "manipx"
 manipy = manipulator.y
-manipy.name = "manipy"
 manipz = manipulator.z
-manipz.name = "manipz"
 manipr = manipulator.r
-manipr.name = "manipr"
 
 samplex = manipulator.sx
-samplex.name = "samplex"
 sampley = manipulator.sy
-sampley.name = "sampley"
 samplez = manipulator.sz
-samplez.name = "samplez"
 sampler = manipulator.sr
-sampler.name = "sampler"
+
