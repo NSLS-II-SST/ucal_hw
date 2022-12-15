@@ -1,10 +1,11 @@
-from sst_base.detectors import I400
+#from sst_base.detectors import I400
+from sst_base.detectors.scalar import I400SingleCh
 from sst_tes.readable_tes import TES
 
 
-dm7_i400 = I400("XF:07ID-BI{DM7:I400-1}", name="DM7_I400")
-ucal_i400 = I400("XF:07ID-BI{DM2:I400-1}", name="ucal_I400")
-m5c_i400 = I400("XF07ID-BI{M5C:I400-1}", name="M5C_I400")
+#dm7_i400 = I400("XF:07ID-BI{DM7:I400-1}", name="DM7_I400")
+#ucal_i400 = I400("XF:07ID-BI{DM2:I400-1}", name="ucal_I400")
+#m5c_i400 = I400("XF07ID-BI{M5C:I400-1}", name="M5C_I400")
 tes = TES("tes", address="10.66.48.41", path="/nsls2/data/sst/legacy/ucal/raw/%Y/%m/%2d", port=4000)
 
 
@@ -13,6 +14,7 @@ def rename_cpt(cpt, name):
 
 
 # i400 aliases
+"""
 i0up = ucal_i400.i1
 rename_cpt(i0up, "i0up")
 ref = ucal_i400.i2
@@ -29,7 +31,15 @@ dm7_i400.i4.kind = "omitted"
 
 #ucal_i400.i2.kind = "omitted"
 ucal_i400.i4.kind = "omitted"
-
-thresholds = {sc.name: 2e-11, i0.name: 2e-11, ref.name: 2e-11, i1.name: 2e-11}
+"""
+i0 = I400SingleCh("XF:07ID-BI{DM2:I400-1}:IC1_MON", name="ucal_i400_i0up")
+i0.mean.name = i0.name
+ref = I400SingleCh("XF:07ID-BI{DM2:I400-1}:IC2_MON", name="ucal_i400_ref")
+ref.mean.name = ref.name
+sc = I400SingleCh("XF:07ID-BI{DM2:I400-1}:IC3_MON", name="ucal_i400_sc")
+sc.mean.name = sc.name
+i0mir = I400SingleCh("XF:07ID-BI{DM7:I400-1}:IC3_MON", name="DM7_i400_i0mirror")
+i0mir.mean.name = i0mir.name
+thresholds = {sc.name: 2e-11, i0mir.name: 2e-11, ref.name: 2e-11, i0.name: 2e-11}
 basic_dets = [ref, i0, sc]
-det_devices = [ucal_i400, dm7_i400]
+#det_devices = [ucal_i400, dm7_i400]
