@@ -1,5 +1,5 @@
 from sst_base.manipulator import Manipulator4AxBase
-from sst_base.motors import EpicsMotor
+from sst_base.motors import FlyableMotor, EpicsMotor
 from sst_funcs.geometry.linalg import vec
 from ophyd import Component as Cpt
 
@@ -8,10 +8,10 @@ manip_origin = vec(0, 0, 464, 0)
 
 
 class Manipulator(Manipulator4AxBase):
-    x = Cpt(EpicsMotor, "SampX}Mtr", name="x", kind='hinted')
-    y = Cpt(EpicsMotor, "SampY}Mtr",  name="y", kind='hinted')
-    z = Cpt(EpicsMotor, "SampZ}Mtr",  name="z", kind='hinted')
-    r = Cpt(EpicsMotor, "SampTh}Mtr", name="r", kind='hinted')
+    x = Cpt(FlyableMotor, "SampX}Mtr", name="x", kind='hinted')
+    y = Cpt(FlyableMotor, "SampY}Mtr",  name="y", kind='hinted')
+    z = Cpt(FlyableMotor, "SampZ}Mtr",  name="z", kind='hinted')
+    r = Cpt(FlyableMotor, "SampTh}Mtr", name="r", kind='hinted')
 
 
 manipulator = Manipulator(None, "XF:07ID1-BI{UCAL-Ax:", origin=manip_origin,
