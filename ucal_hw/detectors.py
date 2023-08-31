@@ -36,16 +36,16 @@ ucal_i400.i4.kind = "omitted"
 """
 #i0 = I400SingleCh("XF:07ID-BI{DM2:I400-1}:IC1_MON", name="ucal_i400_i0up")
 #i0 = I400SingleCh("XF:07ID-BI[ADC:1-Ch:7]Volt", name="ucal_i0up")
-i0 = I400SingleCh("XF:07ID-BI[ADC:2-Ch:0]Volt", name="ucal_i0up")
+i0 = ADCBuffer("XF:07ID-BI[ADC:2-Ch:0]", name="ucal_i0up")
 i0.rescale.set(-1)
 i0.mean.name = i0.name
 #ref = I400SingleCh("XF:07ID-BI{DM2:I400-1}:IC2_MON", name="ucal_i400_ref")
-ref = I400SingleCh("XF:07ID-BI[ADC:1-Ch:5]Volt", name="ucal_ref")
+ref = ADCBuffer("XF:07ID-BI[ADC:1-Ch:5]", name="ucal_ref")
 ref.rescale.set(-1)
 ref.mean.name = ref.name
 #sc = I400SingleCh("XF:07ID-BI{DM2:I400-1}:IC3_MON", name="ucal_i400_sc")
 #sc = I400SingleCh("XF:07ID-BI[ADC:1-Ch:4]Volt", name="ucal_sc")
-sc = I400SingleCh("XF:07ID-BI[ADC:2-Ch:1]Volt", name="ucal_sc")
+sc = ADCBuffer("XF:07ID-BI[ADC:2-Ch:1]", name="ucal_sc")
 sc.rescale.set(-1)
 sc.mean.name = sc.name
 i0mir = I400SingleCh("XF:07ID-BI{DM7:I400-1}:IC3_MON", name="DM7_i400_i0mirror")

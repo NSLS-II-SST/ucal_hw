@@ -14,6 +14,10 @@ class Manipulator(Manipulator4AxBase):
     r = Cpt(FlyableMotor, "SampTh}Mtr", name="r", kind='hinted')
 
 
+def ManipulatorBuilder(prefix, *, name):
+    return Manipulator(None, prefix, origin=manip_origin, name=name)
+
+"""
 manipulator = Manipulator(None, "XF:07ID1-BI{UCAL-Ax:", origin=manip_origin,
                           name="manip")
 
@@ -26,4 +30,4 @@ samplex = manipulator.sx
 sampley = manipulator.sy
 samplez = manipulator.sz
 sampler = manipulator.sr
-
+"""
